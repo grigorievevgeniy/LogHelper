@@ -42,7 +42,7 @@ namespace LogHelper
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(151, 23);
             this.btnEnter.TabIndex = 0;
-            this.btnEnter.Text = "Enter";
+            this.btnEnter.Text = "Logger.Error(\"Enter\");";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
@@ -52,7 +52,7 @@ namespace LogHelper
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(151, 23);
             this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Logger.Error(\"Exit\");";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -80,17 +80,16 @@ namespace LogHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(175, 212);
-            this.ControlBox = false;
             this.Controls.Add(this.btnLogName);
             this.Controls.Add(this.btnLogValue);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.Opacity = 0.8D;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log Help";
             this.TopMost = true;

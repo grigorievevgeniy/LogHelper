@@ -32,7 +32,11 @@ namespace LogHelper
             // ToDo Проверка что в буфере текст.
 
             var text = Clipboard.GetText();
-            Clipboard.SetText($"Logger.Error($\"{text} - {{{text}}}\");");
+            if (!text.Contains("Logger.Error("))
+            {
+                var textText = text.Replace("\"", "\\\"");
+                Clipboard.SetText($"Logger.Error($\"{textText} - {{{text}}}\");");
+            }
         }
 
         private void btnLogName_Click(object sender, EventArgs e)
@@ -40,7 +44,10 @@ namespace LogHelper
             // ToDo Проверка что в буфере текст.
             
             var text = Clipboard.GetText();
-            Clipboard.SetText($"Logger.Error(\"{text}\");");
+            if (!text.Contains("Logger.Error("))
+            {
+                Clipboard.SetText($"Logger.Error(\"{text}\");");
+            }
         }
     }
 }
